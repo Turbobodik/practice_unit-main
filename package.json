@@ -9,7 +9,8 @@
     "posttest": "if exist coverage\\index.html start .\\coverage\\index.html",
     "coverage": "c8 --reporter=text --reporter=lcov mocha",
     "coverage:html": "c8 --reporter=html mocha",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "eslint": "eslint -c eslint.config.cjs \"**/*.{js,mjs,cjs,ts}\""
   },
   "repository": {
     "type": "git",
