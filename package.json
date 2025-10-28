@@ -1,0 +1,44 @@
+{
+  "name": "practice_unit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js,.mjs,.cjs,.ts",
+    "test": "npm run lint && c8 --reporter=html mocha",
+    "posttest": "if exist coverage\\index.html start .\\coverage\\index.html",
+    "coverage": "c8 --reporter=text --reporter=lcov mocha",
+    "coverage:html": "c8 --reporter=html mocha",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryasrdp/practice_unit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryasrdp/practice_unit/issues"
+  },
+  "homepage": "https://github.com/ryasrdp/practice_unit#readme",
+  "devDependencies": {
+    "c8": "^8.0.1",
+    "chai": "^4.3.7",
+    "mocha": "^11.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "eslint": "^8.0.0",
+    "@babel/core": "^7.22.0",
+    "@babel/eslint-parser": "^7.22.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "type": "module"
+}
