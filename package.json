@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint -c .eslintrc.cjs \"**/*.{js,mjs,cjs,ts}\"",
+    "lint": "eslint -c eslint.config.cjs \"**/*.{js,mjs,cjs,ts}\"",
     "test": "npm run lint && c8 --reporter=html mocha",
     "posttest": "if exist coverage\\index.html start .\\coverage\\index.html",
     "coverage": "c8 --reporter=text --reporter=lcov mocha",
@@ -37,7 +37,7 @@
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts}": [
-      "eslint -c .eslintrc.cjs --fix",
+      "eslint -c eslint.config.cjs --fix",
       "git add"
     ]
   },

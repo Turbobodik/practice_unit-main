@@ -1,9 +1,10 @@
+import { describe, it } from 'mocha';
 import { expect } from 'chai';
 import {
   filterUsersByAge,
   sortUsersByName,
   findUserById,
-  isEmailTaken
+  isEmailTaken,
 } from '../utils/usersListUtils.js';
 
 describe('Users List Utilities', () => {
@@ -11,7 +12,7 @@ describe('Users List Utilities', () => {
     { id: 1, name: 'Charlie', age: 25, email: 'charlie@example.com' },
     { id: 2, name: 'Alice', age: 30, email: 'alice@example.com' },
     { id: 3, name: 'bob', age: 20, email: 'bob@example.com' },
-    { id: 4, name: 'Dave', age: 18, email: 'dave@example.com' }
+    { id: 4, name: 'Dave', age: 18, email: 'dave@example.com' },
   ];
 
   describe('filterUsersByAge()', () => {

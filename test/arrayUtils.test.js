@@ -1,5 +1,6 @@
+import { describe, it } from 'mocha';
 import { expect } from 'chai';
-import { findMax, findMin, removeDuplicates } from '../utils/arrayUtils.js'; 
+import { findMax, findMin, removeDuplicates } from '../utils/arrayUtils.js';
 
 describe('Array Utility Functions', () => {
   describe('findMax', () => {
